@@ -1,0 +1,387 @@
+<mat-accordion multi id="container">
+  <h2 class="mat-headline">Simulation</h2>
+
+  <!-- Duration of simulation -->
+  <mat-divider></mat-divider>
+  <div class="content">
+    <p class="mat-subheading-2">
+      Choose a duration span for the simulation.
+    </p>
+    <div class="simulation-form duration-span">
+      <mat-form-field appearance="outline">
+        <mat-label>Period of Time</mat-label>
+        <input
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+          required
+          type="number"
+          step="1.0"
+          min="1"
+          name="duration"
+          placeholder="Enter a number"
+          [(ngModel)]="durationValue"
+          matInput
+          (change)="setDuration(durationValue, durationUnit)"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Time unit</mat-label>
+        <mat-select
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+          name="unit"
+          required
+          [(ngModel)]="durationUnit"
+          placeholder="Select a duration unit"
+          value="years"
+          (selectionChange)="setDuration(durationValue, durationUnit)"
+        >
+          <mat-option value="days">Days</mat-option>
+          <mat-option value="months">Months</mat-option>
+          <mat-option value="years">Years</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Load profile -->
+  <div class="content">
+    <p class="mat-subheading-2">
+      Add Loadprofiles
+    </p>
+    <div class="simulation-form load-profile">
+      <mat-form-field appearance="outline">
+        <mat-label>Profiles</mat-label>
+        <mat-select
+          name="loadProfileName"
+          required
+          [(value)]="loadProfileName"
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+        >
+          <mat-option
+            *ngFor="let profile of loadProfileNames"
+            [value]="profile"
+            >{{ profile }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Penetration level -->
+  <mat-expansion-panel class="content">
+    <mat-expansion-panel-header class="mat-subheading-2">
+      Test Penetration Levels
+    </mat-expansion-panel-header>
+
+    <div class="simulation-form penetration-level">
+      <mat-form-field appearance="outline">
+        <mat-checkbox
+          matPrefix
+          name="pvPenetrationEnabled"
+          (change)="togglePvPenetration($event)"
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+          [(ngModel)]="pvPenetrationEnabled"
+        ></mat-checkbox>
+        <mat-label>PV penetration level</mat-label>
+        <input
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected') ||
+            !pvPenetrationEnabled
+          "
+          required
+          type="number"
+          step="1.0"
+          min="1"
+          name="pvPenetration"
+          placeholder="Enter a percentage"
+          (change)="updatePvPenetration()"
+          [(ngModel)]="penetrationLevel.pv"
+          matInput
+        />
+        <span matSuffix>% of total load ({{ totalLoadPower }} kW)</span>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-checkbox
+          matPrefix
+          name="evPenetrationEnabled"
+          (change)="toggleChargingStationPenetration($event)"
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+          [(ngModel)]="evPenetrationEnabled"
+        ></mat-checkbox>
+        <mat-label>EV penetration level</mat-label>
+        <input
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected') ||
+            !evPenetrationEnabled
+          "
+          required
+          type="number"
+          step="1.0"
+          min="1"
+          name="evPenetration"
+          placeholder="Enter a percentage"
+          (change)="updateChargingStationPenetration()"
+          [(ngModel)]="penetrationLevel.ev"
+          matInput
+        />
+        <span matSuffix>% of total load ({{ totalLoadPower }} kW)</span>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-checkbox
+          matPrefix
+          name="storagePenetrationEnabled"
+          (change)="toggleStoragePenetration($event)"
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+          [(ngModel)]="storagePenetrationEnabled"
+        ></mat-checkbox>
+        <mat-label>Storage penetration level</mat-label>
+        <input
+          [disabled]="
+            !(simulationStatus === '' || simulationStatus === 'selected') ||
+            !storagePenetrationEnabled
+          "
+          required
+          type="number"
+          step="1.0"
+          min="1"
+          name="storagePenetration"
+          placeholder="Enter a percentage"
+          (change)="updateStoragePenetration()"
+          [(ngModel)]="penetrationLevel.storage"
+          matInput
+        />
+        <span matSuffix>% of installed PV ({{ totalPvPower }} kW)</span>
+      </mat-form-field>
+
+      <div *ngIf="storagePenetrationEnabled" class="ess-operational-mode">
+        <p>Operational mode for storage penetration level</p>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Operational mode</mat-label>
+          <mat-select
+            name="operationalMode"
+            required
+            [(ngModel)]="operationalMode"
+            placeholder="Choose an operational mode"
+            (selectionChange)="updateStoragePenetration()"
+          >
+            <mat-option value="Random">Random</mat-option>
+            <mat-option
+              *ngFor="let mode of objectKeys(operationalModes)"
+              [value]="mode"
+            >
+              {{ mode }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-expansion-panel>
+
+  <!-- Restore previous simulation -->
+  <mat-expansion-panel class="content">
+    <mat-expansion-panel-header class="mat-subheading-2">
+      Restore/Export Previous Simulation
+    </mat-expansion-panel-header>
+    <mat-panel-description class="simulation-form load-simulation">
+      <mat-form-field appearance="outline">
+        <mat-label>Simulations</mat-label>
+        <mat-select
+          name="previousSimulation"
+          required
+          [(ngModel)]="simulationID"
+          [disabled]="
+            simulationHistory.length <= 0 ||
+            !(simulationStatus === '' || simulationStatus === 'selected')
+          "
+        >
+          <mat-option
+            *ngFor="let simulation of simulationHistory"
+            [value]="simulation.id"
+            (click)="choosePreviousSimulation(simulation.id)"
+          >
+            {{ simulation.location }} - {{ simulation.id }} :
+            {{ simulation.timestamp }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!-- Results -->
+
+<mat-divider></mat-divider>
+
+<div class="simulation-status" [ngSwitch]="simulationStatus">
+  <div class="error-simulation-message" *ngSwitchCase="'error'">
+    <p>Simulation error! Retry again.</p>
+    <p>{{ simulationErrorMessage }}</p>
+  </div>
+  <p class="ready-simulation-message" *ngSwitchCase="'selected'">
+    Ready for simulation
+  </p>
+  <div class="running-simulation-message" *ngSwitchCase="'running'">
+    <p>Running simulation</p>
+    <p *ngIf="simulationID">Simulation ID: {{ simulationID }}</p>
+    <p *ngIf="simulationStarted">Simulation started</p>
+    <p *ngIf="currentSimulationStatus || currentSimulationStatus === 0">
+      Simulation status:
+      <span *ngIf="currentSimulationStatus === 0">Loading Grid</span>
+      <span *ngIf="currentSimulationStatus">
+        {{ currentSimulationStatus }} %
+      </span>
+    </p>
+  </div>
+  <div class="ready-simulation-message" *ngSwitchCase="'complete'">
+    <h3>Simulation Results</h3>
+    <p>Simulated a duration of {{ durationValue }} {{ durationUnit }}.</p>
+    <p class="simulation-error-count" *ngIf="errorCount">
+      {{ errorCount }} critical nodes.
+    </p>
+    <mat-divider></mat-divider>
+
+    <div *ngIf="isNotEmpty(economicEngineResponse)" class="ee-result">
+      <h4>Economic Model results</h4>
+      <h5 class="simulation-duration-message">
+        <i>
+          Economic Engine was simulated for
+          {{ getDurationInYears(durationValue, durationUnit) }} year
+          <span *ngIf="getDurationInYears(durationValue, durationUnit) === 1">
+            as minimum simulation duration is a year</span
+          >
+        </i>
+      </h5>
+      <p>
+        <b>Scenario name :</b>
+        {{ economicEngineResponse['scenario_name'] }}
+      </p>
+      <p>
+        <b
+          >TCO (DSO)
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Help Message"
+            inline
+            [matTooltipClass]="'help-tooltip'"
+            [matTooltipPosition]="'after'"
+            matTooltip="* It considers:
+            - grid strengthening costs,
+            - power losses costs,
+            - in the cases of ESS installed at substation level:
+                 o bureaucracy costs to install the ESS,
+                 o price and size (kWh) of the ESS installed at substation level "
+            color="accent"
+            >help</mat-icon
+          >
+          :
+        </b>
+
+        {{
+          economicEngineResponse['TCO_DSO'] | currency: 'EUR':'symbol':4 - 2 - 2
+        }}
+      </p>
+      <p>
+        <b
+          >TCO (Prosumer)
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Help Message"
+            inline
+            [matTooltipClass]="'help-tooltip'"
+            [matTooltipPosition]="'after'"
+            matTooltip="It considers:
+            - power losses costs,
+            - households energy consumption costs (energy purchased in the market),
+            - price of energy in the selected country,
+            - in the cases of ESS installed at prosumer level:
+                o number of ESS installed at prosumer level,
+                o bureaucracy costs to install a ESS,
+                o price and size (kWh) of the batteries."
+            color="accent"
+            >help</mat-icon
+          >
+          :</b
+        >
+        {{
+          economicEngineResponse['TCO_Difference']
+            | currency: 'EUR':'symbol':4 - 2 - 2
+        }}
+      </p>
+      <p>
+        <b
+          >TCO (Community)
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Help Message"
+            inline
+            [matTooltipClass]="'help-tooltip'"
+            [matTooltipPosition]="'after'"
+            matTooltip="TCO (DSO) + TCO (prosumer)"
+            color="accent"
+            >help</mat-icon
+          >
+          :</b
+        >
+        {{
+          economicEngineResponse['TCO_Community']
+            | currency: 'EUR':'symbol':4 - 2 - 2
+        }}
+      </p>
+    </div>
+
+    <mat-divider></mat-divider>
+    <a
+      *ngIf="gridData"
+      mat-raised-button
+      color="accent"
+      class="exportSimulationButton"
+      title="Download simulation results of {{ simulationID }}"
+      [disabled]="!gridData"
+      [href]="gridData"
+      download="grid-{{ simulationID }}-simulation-results.json"
+    >
+      Export Simulation
+      <mat-icon class="export-icon">cloud_download</mat-icon>
+    </a>
+  </div>
+  <p class="simulation-message" *ngSwitchDefault>
+    Please select a radial on the map
+  </p>
+</div>
+
+<div
+  class="simulation-status"
+  *ngIf="!['running', 'complete', 'error'].includes(simulationStatus)"
+>
+  <button
+    class="run-simulation-btn"
+    [disabled]="
+      simulationStatus != 'selected' ||
+      !duration ||
+      !penetrationLevel ||
+      !loadProfileName
+    "
+    mat-raised-button
+    color="accent"
+    (click)="runSim()"
+  >
+    Run simulation
+  </button>
+</div>
+
+<div *ngIf="simulationStatus == 'running'" class="simulation-status">
+  <mat-spinner diameter="50" color="accent"></mat-spinner>
+</div>

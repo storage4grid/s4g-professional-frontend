@@ -1,0 +1,64 @@
+/**
+*    JSON object for storage systems
+**/
+{
+    "name" : "Fronius Solar Battery 12.0",
+    "manufacturer" : "Fronius",
+    "electricalParameters" : [
+        "capacity" : {    
+            "usableCapacity" : 9600, 
+            "capacityEntity" : "Wh"
+        }, 
+        "voltageRange" : {
+            "voltageRangeMin" : 320, 
+            "voltageRangeMax" : 460, 
+            "voltageEntity" : "V"
+        },
+        "cycleStability" : 8000,
+        "charging" : {    
+            "nominalChargingPower" : 6400, 
+            "nominalChargingPowerEntity" : "W", 
+            "maxChargingCurrent" : 16,
+            "maxChargingEntity" : "A"
+        },
+        "discharging" : {    
+            "nominalDischargingPower" : 6400, 
+            "nominalDischargingPowerEntity" : "W", 
+            "maxDischargingCurrent" : 16,
+            "maxChargingEntity" : "A"
+        },
+    ], //below is probably not needed for the profGUI
+    "generalData" : [
+        "batteryTechnology" : "lithium iron phosphate",
+        "height" : {
+            "heightValue" : 955,
+            "heightEntity" : "mm"
+        },
+        "width" : {
+            "widthValue" : 570,
+            "widthEntity" : "mm"
+        },
+        "weight" : 
+        {
+            "weightValue" : 176,
+            "weightEntity" : "kg"
+        },
+        "degreeOfProtection" : "IP 20",
+        "protectionClass" : "1.0",
+        "installation" : "indoor",
+        "ambientTemperatureRange" : {
+            "temperatureMin" : 5,
+            "temperatureMax" : 35,
+            "temperatureEntity" : "°C"
+        },
+        "permittedHumidity" : {
+            "humidityMin" : 0,
+            "humidityMax" : 95,
+            "humidtiyEntity" : "%"
+        },
+        "dcConnetionTechnology" : "Screw terminals 2.5 - 16 mm²",
+        "longServiceLife" : "> 20 years",
+        "certificatesAndStandards" : "IEC/EN 62133; EN 61000-6-2:2005, EN 61000-6-3:2007 + A1:2011, EN 62311:2008, FCC Part 15 Subpart B:2012 ClassB, UN 38.3", //das muss man evtl nochmal unterteilen
+        "connectionToInverter" : "Modbus RTU (RS485)"
+    ]
+}

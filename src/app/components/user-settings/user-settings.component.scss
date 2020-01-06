@@ -1,0 +1,42 @@
+.settings__outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.settings {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.mat-table {
+  padding-top: 1rem;
+  display: block;
+}
+
+.mat-row,
+.mat-header-row {
+  display: flex;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  align-items: center;
+  min-height: 3rem;
+  padding: 0 1rem;
+}
+
+.mat-cell,
+.mat-header-cell {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.mat-cell__header {
+  width: 15%;
+  font-weight: 500;
+}

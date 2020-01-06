@@ -1,0 +1,13 @@
+.search-form {
+  z-index: 1000;
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+}
+
+.search-form /deep/ .mat-form-field-outline {
+  background-color: #fafafa;
+  cursor: text;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}

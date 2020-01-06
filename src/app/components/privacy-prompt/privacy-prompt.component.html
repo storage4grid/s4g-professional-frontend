@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Privacy issues and constraints</h2>
+<p class="status-message">
+  This application and the data involved is only to be used by the Storage4Grid
+  consortium or associates for scientific purposes. If you are not part of the
+  Storage4Grid team or an employee of one of the Storage4Grid test-site partners
+  with a signed contract and/or consent form, please inform the Storage4Grid
+  project responsibles via
+  <a
+    href="mailto:storage4grid@ismb.it?
+		subject=[S4G]%20Privacy%20Issues%20with%20Professional%20GUI"
+    >storage4grid[at]ismb.it</a
+  >.
+</p>
+
+<form>
+  <mat-checkbox (change)="showPrivacyPrompt = !showPrivacyPrompt">
+    Do not show this info again
+  </mat-checkbox>
+  <br /><br />
+  <button
+    class="agree-to-privacy-btn"
+    mat-raised-button
+    color="primary"
+    (click)="agreeToPrivacy()"
+  >
+    I hereby verify that I have permission to use this application
+  </button>
+</form>

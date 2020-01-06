@@ -1,0 +1,30 @@
+<mat-toolbar class="mat-toolbar">
+  <h1 class="mat-toolbar__title">
+    S4G Professional GUI
+  </h1>
+  <div class="mat-toolbar__content">
+    <span class="toolbar-user">
+      User:
+      <strong>
+        {{ userDetails.username }}
+        <span *ngIf="userRole">({{ userRole }})</span>
+      </strong>
+    </span>
+
+    <button
+      mat-button
+      (click)="viewMap()"
+      [class.active]="currentPage === 'map'"
+    >
+      Map
+    </button>
+    <button
+      mat-button
+      (click)="viewSettings()"
+      [class.active]="currentPage === 'settings'"
+    >
+      Settings
+    </button>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,13 @@
+.toolbox-container {
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+button.active {
+  color: #5c6bc0;
+}

@@ -1,0 +1,44 @@
+<div id="map-container">
+  <!-- Simulation Widget -->
+  <app-simulation-widget
+    class="mat-elevation-z2"
+    id="simulation-widget"
+    [totalPvPower]="totalPvPower"
+    [totalLoadPower]="totalLoadPower"
+    [simulationStatus]="simulationStatus"
+    [simulationErrorMessage]="simulationErrorMessage"
+    [simulationID]="simulationID"
+    [simulationStarted]="simulationStarted"
+    [currentSimulationStatus]="currentSimulationStatus"
+    [economicEngineResponse]="economicEngineResponse"
+    [errorCount]="errorCount"
+    (startSimulation)="startSimulation($event)"
+    (loadSimulation)="loadSimulation($event)"
+    (setPvPenetrationLevel)="setPvPenetrationLevel($event)"
+    (setChargingStationPenetrationLevel)="
+      setChargingStationPenetrationLevel($event)
+    "
+    (setStoragePenetrationLevel)="setStoragePenetrationLevel($event)"
+  ></app-simulation-widget>
+
+  <!-- Main map element -->
+  <div
+    id="map"
+    [ngClass]="mapClass"
+    leaflet
+    [leafletOptions]="options"
+    [leafletMarkerCluster]="markerClusterData"
+    [leafletMarkerClusterOptions]="markerClusterOptions"
+    (leafletMarkerClusterReady)="markerClusterReady($event)"
+    (leafletMapReady)="onMapReady($event)"
+  >
+    <!-- Location search -->
+    <app-searchbar [errorMessage]="searchErrorMessage"></app-searchbar>
+
+    <!-- Toolbox -->
+    <app-toolbox
+      class="tool-selection-menu"
+      (toolSelection)="toolSelection($event)"
+    ></app-toolbox>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<form>
+  <h1 mat-dialog-title>Add a new photovoltaic cell</h1>
+  <p>Connected to Node : {{ nodeId }}</p>
+  <mat-dialog-content class="pv-popup">
+    <mat-form-field appearance="outline">
+      <mat-label>Model</mat-label>
+      <input type="text" value="Fronius Solar Cell" disabled matInput />
+    </mat-form-field>
+    <mat-label>Maximum Power in kW</mat-label>
+
+    <mat-slider
+      name="maxPowerKW"
+      [max]="max"
+      [min]="min"
+      [step]="step"
+      thumbLabel
+      [(ngModel)]="maxPowerKW"
+    >
+    </mat-slider>
+  </mat-dialog-content>
+  <mat-dialog-actions class="pv-popup-actions">
+    <button type="button" color="warn" (click)="dialogRef.close()" mat-button>
+      Cancel
+    </button>
+    <button
+      type="button"
+      *ngIf="edit"
+      color="warn"
+      (click)="delete()"
+      mat-stroked-button
+    >
+      Delete
+    </button>
+    <ng-container *ngIf="edit; else addButton">
+      <button
+        [disabled]="!maxPowerKW"
+        (click)="submit(true)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Edit
+      </button>
+    </ng-container>
+    <ng-template #addButton>
+      <button
+        [disabled]="!maxPowerKW"
+        (click)="submit(false)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Add
+      </button>
+    </ng-template>
+  </mat-dialog-actions>
+</form>

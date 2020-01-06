@@ -1,0 +1,28 @@
+// **********************************
+// Styling of all visual elements in
+// the toolbar
+// **********************************
+
+.toolbar-btn--right{
+  margin-left: 1em;
+}
+
+.toolbar-user{
+  margin-right: 1em;
+  font-size: .8em;
+}
+
+// **** restyling of angular-material styles
+
+.mat-toolbar button.active{
+  color: $mat-accent;
+}
+
+.mat-toolbar.mat-toolbar--grid{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  align-items: center;
+}
+
+// *****************************************

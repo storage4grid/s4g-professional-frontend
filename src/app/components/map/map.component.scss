@@ -1,0 +1,38 @@
+#map-container {
+  height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.leaflet-container.default-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/defaultCursor.svg), pointer !important;
+}
+
+.leaflet-container.info-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/infoCursor.svg), pointer !important;
+}
+
+.leaflet-container.storage-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/StorageCursor.svg), pointer !important;
+}
+
+.leaflet-container.pv-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/PVCursor.svg), pointer !important;
+}
+
+.leaflet-container.ev-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/EVCursor.svg), pointer !important;
+}
+
+.leaflet-container.house-cursor-enabled {
+  cursor: url(../../../assets/images/cursors/HouseCursor.svg), pointer !important;
+}
+
+#simulation-widget {
+  background-color: white;
+  border: #ddd thin solid;
+  margin-top: 0em;
+  padding: 1em;
+  text-align: left;
+  overflow: auto;
+}

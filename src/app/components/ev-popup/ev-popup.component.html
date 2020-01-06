@@ -1,0 +1,140 @@
+<form>
+  <h1 mat-dialog-title>Add a new charging station and electric car</h1>
+  <p>Connected to Node : {{ nodeId }}</p>
+  <mat-dialog-content class="ev-popup">
+    <mat-form-field class="ev-popup__selection" appearance="outline">
+      <mat-label>Charging station type</mat-label>
+      <mat-select
+        name="typeApplications"
+        required
+        [(ngModel)]="typeApplication"
+      >
+        <mat-option
+          *ngFor="let typeApplication of typeApplications"
+          [value]="typeApplication"
+        >
+          {{ typeApplication | titlecase }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="ev-popup__selection" appearance="outline">
+      <mat-label>Charging station model</mat-label>
+      <mat-select
+        name="chargingStationModel"
+        required
+        [(ngModel)]="chargingStationModel"
+      >
+        <mat-option
+          *ngFor="let chargingStation of objectKeys(chargingStationModels)"
+          [value]="chargingStation"
+        >
+          {{ chargingStation }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="ev-popup__information">
+      <mat-form-field>
+        <mat-label>Maximum Charging Power</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            chargingStationModel
+              ? chargingStationModels[chargingStationModel]
+                  .max_charging_power_kW + ' kW'
+              : 'Please select model'
+          "
+          disabled
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Charging Efficiency</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            chargingStationModel
+              ? chargingStationModels[chargingStationModel]
+                  .charging_efficiency + ' %'
+              : 'Please select model'
+          "
+          disabled
+          matInput
+        />
+      </mat-form-field>
+    </div>
+    <mat-form-field class="ev-popup__selection" appearance="outline">
+      <mat-label>Electric vehicle (EV) model</mat-label>
+      <mat-select name="evModel" required [(ngModel)]="evModel">
+        <mat-option *ngFor="let ev of objectKeys(evModels)" [value]="ev">
+          {{ ev }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="ev-popup__information ev_model">
+      <mat-form-field>
+        <mat-label>Battery Capacity</mat-label>
+        <input
+          type="text"
+          [value]="
+            evModel && chargingStationModel
+              ? evModels[evModel].battery_capacity_kWh + ' kWh'
+              : 'Please select model of charging station and EV'
+          "
+          disabled
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Consumption in kW per 100Km</mat-label>
+        <input
+          type="text"
+          [value]="
+            evModel && chargingStationModel
+              ? evModels[evModel].consumption_in_kW_pro_100_km + ' kWh/100km'
+              : 'Please select model of charging station and EV'
+          "
+          disabled
+          matInput
+        />
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions class="ev-popup-actions">
+    <button type="button" color="warn" (click)="dialogRef.close()" mat-button>
+      Cancel
+    </button>
+    <button
+      type="button"
+      *ngIf="edit"
+      color="warn"
+      (click)="delete()"
+      mat-stroked-button
+    >
+      Delete
+    </button>
+    <ng-container *ngIf="edit; else addButton">
+      <button
+        [disabled]="!(evModel && chargingStationModel && typeApplication)"
+        (click)="submit(true)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Edit
+      </button>
+    </ng-container>
+    <ng-template #addButton>
+      <button
+        [disabled]="!(evModel && chargingStationModel && typeApplication)"
+        (click)="submit(false)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Add
+      </button>
+    </ng-template>
+  </mat-dialog-actions>
+</form>

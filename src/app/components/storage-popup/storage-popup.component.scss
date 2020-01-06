@@ -1,0 +1,34 @@
+.storage-popup {
+  display: flex;
+  flex-direction: column;
+
+  .storage-popup__selection {
+    width: 70%;
+  }
+
+  .storage-popup__information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+
+  .storage-popup__information.lifetime {
+    justify-content: flex-start;
+    width: 100%;
+
+    mat-form-field {
+      width: 70%;
+    }
+  }
+}
+
+.storage-popup-actions {
+  float: right;
+  margin-top: 1rem;
+  padding: 0.5rem;
+
+  button {
+    margin-right: 0.5rem;
+  }
+}

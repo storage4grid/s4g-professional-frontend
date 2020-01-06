@@ -1,0 +1,110 @@
+// **********************************
+// Styling of elements contained in the map component
+// **********************************
+
+#mapElement {
+  height: 100vh;
+  flex: 1 1 auto;
+}
+
+app-map {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.map-component {
+  position: relative;
+}
+
+.map-container {
+  display: grid;
+}
+
+// unable to use proper BEM, thanks Angular >:(
+.editmode {
+  cursor: crosshair;
+}
+
+// **** Openlayers Popup
+.ol-popup {
+  display: grid;
+  grid-auto-flow: column;
+  position: absolute;
+  background-color: white;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  padding: 0 0 15px 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+  z-index: 2;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  justify-self: end;
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup__content h2 {
+  font-size: $medium-font;
+}
+
+.ol-popup__voltage p.has-error {
+  color: red;
+}
+
+.ol-popup__voltage p {
+  color: green;
+  font-size: $small-font;
+}
+
+// **** restyling of angular-material styles
+
+// position the search field on top of the map layer
+.search-form__input.mat-form-field {
+  position: absolute;
+  top: 1em;
+}
+
+.search-form__input .mat-form-field-wrapper .mat-form-field-flex {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: -5px;
+}
+
+.mat-form-field-outline {
+  background-color: white;
+}
+
+// *****************************************

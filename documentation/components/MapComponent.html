@@ -1,0 +1,2058 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>s4g-professional documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">s4g-professional documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MapComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/map/map.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This component handles the map view, which is restricted to authenticated users only.
+It also is the main component handling all actions involving element creation and simulation.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-map</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>map.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./map.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#grid">grid</a>
+                            </li>
+                            <li>
+                                <a href="#gridElements">gridElements</a>
+                            </li>
+                            <li>
+                                <a href="#gridElementsLayer">gridElementsLayer</a>
+                            </li>
+                            <li>
+                                <a href="#gridLayer">gridLayer</a>
+                            </li>
+                            <li>
+                                <a href="#location">location</a>
+                            </li>
+                            <li>
+                                <a href="#locations">locations</a>
+                            </li>
+                            <li>
+                                <a href="#map">map</a>
+                            </li>
+                            <li>
+                                <a href="#markerClusterData">markerClusterData</a>
+                            </li>
+                            <li>
+                                <a href="#markerClusterGroup">markerClusterGroup</a>
+                            </li>
+                            <li>
+                                <a href="#markerClusterOptions">markerClusterOptions</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#privacyPrompt">privacyPrompt</a>
+                            </li>
+                            <li>
+                                <a href="#searchErrorMessage">searchErrorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#showPrivacyPrompt">showPrivacyPrompt</a>
+                            </li>
+                            <li>
+                                <a href="#status">status</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#displayData">displayData</a>
+                            </li>
+                            <li>
+                                <a href="#markerClusterReady">markerClusterReady</a>
+                            </li>
+                            <li>
+                                <a href="#moveMapTo">moveMapTo</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onMapReady">onMapReady</a>
+                            </li>
+                            <li>
+                                <a href="#openPrivacyPrompt">openPrivacyPrompt</a>
+                            </li>
+                            <li>
+                                <a href="#partitionConnectedElement">partitionConnectedElement</a>
+                            </li>
+                            <li>
+                                <a href="#partitionConnectedElementsInNode">partitionConnectedElementsInNode</a>
+                            </li>
+                            <li>
+                                <a href="#populateData">populateData</a>
+                            </li>
+                            <li>
+                                <a href="#toolSelection">toolSelection</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(gridService: <a href="../injectables/GridService.html">GridService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/components/map/map.component.ts:100</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>gridService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GridService.html" target="_self" >GridService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayData"></a>
+                    <span class="name">
+                        <b>
+                            displayData
+                        </b>
+                        <a href="#displayData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>displayData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="253"
+                            class="link-to-prism">src/app/components/map/map.component.ts:253</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="markerClusterReady"></a>
+                    <span class="name">
+                        <b>
+                            markerClusterReady
+                        </b>
+                        <a href="#markerClusterReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>markerClusterReady(group: L.MarkerClusterGroup)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="304"
+                            class="link-to-prism">src/app/components/map/map.component.ts:304</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>group</td>
+                                    <td>
+                                            <code>L.MarkerClusterGroup</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveMapTo"></a>
+                    <span class="name">
+                        <b>
+                            moveMapTo
+                        </b>
+                        <a href="#moveMapTo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>moveMapTo(location: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="308"
+                            class="link-to-prism">src/app/components/map/map.component.ts:308</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>location</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="429"
+                            class="link-to-prism">src/app/components/map/map.component.ts:429</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/components/map/map.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onMapReady"></a>
+                    <span class="name">
+                        <b>
+                            onMapReady
+                        </b>
+                        <a href="#onMapReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onMapReady(map: L.Map)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">src/app/components/map/map.component.ts:300</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>map</td>
+                                    <td>
+                                            <code>L.Map</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openPrivacyPrompt"></a>
+                    <span class="name">
+                        <b>
+                            openPrivacyPrompt
+                        </b>
+                        <a href="#openPrivacyPrompt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openPrivacyPrompt()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">src/app/components/map/map.component.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="partitionConnectedElement"></a>
+                    <span class="name">
+                        <b>
+                            partitionConnectedElement
+                        </b>
+                        <a href="#partitionConnectedElement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>partitionConnectedElement(connectedElement: <a href="../interfaces/ConnectedElement.html">ConnectedElement</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">src/app/components/map/map.component.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>connectedElement</td>
+                                    <td>
+                                                <code><a href="../interfaces/ConnectedElement.html" target="_self" >ConnectedElement</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="partitionConnectedElementsInNode"></a>
+                    <span class="name">
+                        <b>
+                            partitionConnectedElementsInNode
+                        </b>
+                        <a href="#partitionConnectedElementsInNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>partitionConnectedElementsInNode(nodes: <a href="../interfaces/Nodes.html">Nodes</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/components/map/map.component.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nodes</td>
+                                    <td>
+                                                <code><a href="../interfaces/Nodes.html" target="_self" >Nodes</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="populateData"></a>
+                    <span class="name">
+                        <b>
+                            populateData
+                        </b>
+                        <a href="#populateData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>populateData(location: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">src/app/components/map/map.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>location</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toolSelection"></a>
+                    <span class="name">
+                        <b>
+                            toolSelection
+                        </b>
+                        <a href="#toolSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toolSelection(activeTool: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="318"
+                            class="link-to-prism">src/app/components/map/map.component.ts:318</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>activeTool</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/app/components/map/map.component.ts:105</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grid"></a>
+                        <span class="name">
+                            <b>
+                            grid</b>
+                            <a href="#grid"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Grid.html" target="_self" >Grid</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    nodes: {},
+    radials: {}
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/components/map/map.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridElements"></a>
+                        <span class="name">
+                            <b>
+                            gridElements</b>
+                            <a href="#gridElements"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/GridElements.html" target="_self" >GridElements</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    houses: {},
+    pvs: {},
+    storages: {},
+    transformers: {}
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/components/map/map.component.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridElementsLayer"></a>
+                        <span class="name">
+                            <b>
+                            gridElementsLayer</b>
+                            <a href="#gridElementsLayer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/GridElementsLayer.html" target="_self" >GridElementsLayer</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    houseLayer: {},
+    pvLayer: {},
+    storageLayer: {},
+    transformerLayer: {}
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/components/map/map.component.ts:81</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridLayer"></a>
+                        <span class="name">
+                            <b>
+                            gridLayer</b>
+                            <a href="#gridLayer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/GridLayer.html" target="_self" >GridLayer</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    nodeLayer: {},
+    radialLayer: []
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/components/map/map.component.ts:92</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="location"></a>
+                        <span class="name">
+                            <b>
+                            location</b>
+                            <a href="#location"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/map/map.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locations"></a>
+                        <span class="name">
+                            <b>
+                            locations</b>
+                            <a href="#locations"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Object.keys(AppSettings.LOCATIONS)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/map/map.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="map"></a>
+                        <span class="name">
+                            <b>
+                            map</b>
+                            <a href="#map"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L.Map</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/components/map/map.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="markerClusterData"></a>
+                        <span class="name">
+                            <b>
+                            markerClusterData</b>
+                            <a href="#markerClusterData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L.Marker[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/components/map/map.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="markerClusterGroup"></a>
+                        <span class="name">
+                            <b>
+                            markerClusterGroup</b>
+                            <a href="#markerClusterGroup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L.MarkerClusterGroup</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/components/map/map.component.ts:98</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="markerClusterOptions"></a>
+                        <span class="name">
+                            <b>
+                            markerClusterOptions</b>
+                            <a href="#markerClusterOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L.MarkerClusterGroupOptions</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>markerClusterOptions</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/components/map/map.component.ts:100</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name">
+                            <b>
+                            options</b>
+                            <a href="#options"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>L.MapOptions</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>leafletOptions</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/map/map.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="privacyPrompt"></a>
+                        <span class="name">
+                            <b>
+                            privacyPrompt</b>
+                            <a href="#privacyPrompt"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/map/map.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Privacy prompt to inform the user about data issues</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchErrorMessage"></a>
+                        <span class="name">
+                            <b>
+                            searchErrorMessage</b>
+                            <a href="#searchErrorMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/map/map.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showPrivacyPrompt"></a>
+                        <span class="name">
+                            <b>
+                            showPrivacyPrompt</b>
+                            <a href="#showPrivacyPrompt"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/map/map.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>open privacy prompt value, read from local storage</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="status"></a>
+                        <span class="name">
+                            <b>
+                            status</b>
+                            <a href="#status"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/map/map.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as L from &#x27;leaflet&#x27;;
+import &#x27;leaflet.markercluster&#x27;;
+
+import { partition, uniqueId } from &#x27;lodash&#x27;;
+
+// ******** Angular Modules *********
+import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { MatDialog, MatDialogConfig } from &#x27;@angular/material&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+// ******** Components *********
+import { PrivacyPromptComponent } from &#x27;../privacy-prompt/privacy-prompt.component&#x27;;
+
+import { AppSettings } from &#x27;../../app-config&#x27;;
+import { GridService } from &#x27;../../services/grid.service&#x27;;
+
+import { leafletOptions, markerClusterOptions } from &#x27;./map.config&#x27;;
+import { GridElementsLayer, GridLayer } from &#x27;./map.typings&#x27;;
+
+import { Nodes, Node, ConnectedElement } from &#x27;../../models/node&#x27;;
+import { Radials } from &#x27;../../models/radial&#x27;;
+import { House, Houses } from &#x27;../../models/house&#x27;;
+import { PV, PVs } from &#x27;../../models/pv&#x27;;
+import { Storage, Storages } from &#x27;../../models/storage&#x27;;
+import { Transformer, Transformers } from &#x27;../../models/transformer&#x27;;
+import { GridElements, Grid } from &#x27;../../models/grid&#x27;;
+
+import {
+  createNodeMarkers,
+  lineMarkers,
+  createIconMarkers,
+  extractConnectedElements,
+  parseConnectedElement
+} from &#x27;./map.util&#x27;;
+
+/**
+ * This component handles the map view, which is restricted to authenticated users only.
+ * It also is the main component handling all actions involving element creation and simulation.
+ */
+@Component({
+  selector: &#x27;app-map&#x27;,
+  templateUrl: &#x27;./map.component.html&#x27;,
+  styleUrls: [&#x27;map.component.scss&#x27;]
+})
+export class MapComponent implements OnInit, OnDestroy {
+  /**
+   * Privacy prompt to inform the user about data issues
+   */
+  privacyPrompt: any;
+
+  /**
+   * open privacy prompt value, read from local storage
+   **/
+
+  showPrivacyPrompt: true;
+
+  /* Search error */
+  searchErrorMessage: string;
+
+  /* Grid details */
+
+  locations: string[] &#x3D; Object.keys(AppSettings.LOCATIONS);
+
+  status: string;
+
+  /* Leaflet layers and other information */
+
+  // Values to bind to Leaflet Directive
+
+  map: L.Map;
+  options: L.MapOptions &#x3D; leafletOptions;
+
+  location: string;
+
+  gridElements: GridElements &#x3D; {
+    houses: {},
+    pvs: {},
+    storages: {},
+    transformers: {}
+  };
+  gridElementsLayer: GridElementsLayer &#x3D; {
+    houseLayer: {},
+    pvLayer: {},
+    storageLayer: {},
+    transformerLayer: {}
+  };
+
+  grid: Grid &#x3D; {
+    nodes: {},
+    radials: {}
+  };
+  gridLayer: GridLayer &#x3D; {
+    nodeLayer: {},
+    radialLayer: []
+  };
+
+  // Marker cluster stuff
+  markerClusterGroup: L.MarkerClusterGroup;
+  markerClusterData: L.Marker[] &#x3D; [];
+  markerClusterOptions: L.MarkerClusterGroupOptions &#x3D; markerClusterOptions;
+
+  constructor(
+    private gridService: GridService,
+    private route: ActivatedRoute,
+    public dialog: MatDialog
+  ) {
+    if (!localStorage.getItem(&#x27;defaultLocation&#x27;)) {
+      localStorage.setItem(&#x27;defaultLocation&#x27;, &#x27;fur&#x27;);
+    }
+
+    this.status &#x3D; &#x27;normal&#x27;;
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(queryParams &#x3D;&gt; {
+      this.location &#x3D;
+        queryParams[&#x27;location&#x27;] || localStorage.getItem(&#x27;defaultLocation&#x27;);
+      this.populateData(this.location);
+
+      if (this.map) {
+        this.moveMapTo(this.location);
+      }
+    });
+
+    // open privacyPrompt
+    /**
+     * open the privacy prompt dialog
+     * needed to use setTimeout to prevent ExpressionChangedAfterItHasBeenCheckedError #5268; more info can be found
+     * on the gitHub page https://github.com/angular/material2/issues/5268
+     **/
+    setTimeout(() &#x3D;&gt; this.openPrivacyPrompt());
+  }
+
+  partitionConnectedElementsInNode(nodes: Nodes): [Houses, Storages, PVs] {
+    let houses: Houses &#x3D; {};
+    let storages: Storages &#x3D; {};
+    let pvs: PVs &#x3D; {};
+
+    const connectedElements: ConnectedElement[] &#x3D; Object.entries(nodes).map(
+      node &#x3D;&gt; parseConnectedElement(node)
+    );
+
+    connectedElements.forEach(connectedElement &#x3D;&gt; {
+      const [house, storage, pv] &#x3D; this.partitionConnectedElement(
+        connectedElement
+      );
+
+      houses &#x3D; { ...houses, ...house };
+      storages &#x3D; { ...storages, ...storage };
+      pvs &#x3D; { ...pvs, ...pv };
+    });
+
+    return [houses, storages, pvs];
+  }
+
+  partitionConnectedElement(
+    connectedElement: ConnectedElement
+  ): [Houses, Storages, PVs] {
+    let houses: Houses &#x3D; {};
+    let storages: Storages &#x3D; {};
+    let pvs: PVs &#x3D; {};
+
+    const noOfElements &#x3D; connectedElement.elements.length;
+
+    const nodeLatLng &#x3D; connectedElement.coordinate;
+    const nodePoint &#x3D; this.map.latLngToContainerPoint(nodeLatLng);
+
+    if (noOfElements) {
+      const angle &#x3D; Math.ceil(360 / noOfElements) % 360;
+      const radius &#x3D; Math.ceil(noOfElements / 6) * 25;
+
+      const elementsWithCoordinate &#x3D; connectedElement.elements.map(
+        (element, index) &#x3D;&gt; {
+          const elementAngleInRads &#x3D; (angle * index + 30) * (Math.PI / 180);
+
+          const latitudine &#x3D;
+            nodePoint.x + Math.sin(elementAngleInRads) * radius;
+          const longitudine &#x3D;
+            nodePoint.y + Math.cos(elementAngleInRads) * radius;
+
+          const { lat, lng } &#x3D; this.map.containerPointToLatLng(
+            L.point(latitudine, longitudine, true)
+          );
+
+          return { latitudine: lat, longitudine: lng, ...element };
+        }
+      );
+
+      const [houseOrStorage, pvPartition] &#x3D; partition(
+        elementsWithCoordinate,
+        (element: House | Storage | PV) &#x3D;&gt; &#x27;category&#x27; in element
+      );
+
+      const [storagePartition, housePartition] &#x3D; partition(
+        houseOrStorage,
+        (element: House | Storage) &#x3D;&gt; element.category &#x3D;&#x3D;&#x3D; &#x27;storage&#x27;
+      );
+
+      houses &#x3D; extractConnectedElements(housePartition);
+      storages &#x3D; extractConnectedElements(storagePartition);
+      pvs &#x3D; extractConnectedElements(pvPartition);
+    }
+
+    return [houses, storages, pvs];
+  }
+
+  populateData(location: string): void {
+    this.gridService
+      .getGridData(location)
+      .subscribe(([nodes, radials, _, transformers]) &#x3D;&gt; {
+        this.grid &#x3D; {
+          nodes: nodes,
+          radials: radials
+        };
+
+        const [houses, storages, pvs] &#x3D; this.partitionConnectedElementsInNode(
+          nodes
+        );
+
+        this.gridElements &#x3D; {
+          houses: houses,
+          pvs: pvs,
+          storages: storages,
+          transformers: transformers
+        };
+
+        this.gridLayer.nodeLayer &#x3D; createNodeMarkers(nodes);
+
+        this.gridElementsLayer.houseLayer &#x3D; createIconMarkers(
+          houses,
+          &#x27;house&#x27;,
+          &#x27;House&#x27;
+        );
+
+        this.gridElementsLayer.pvLayer &#x3D; createIconMarkers(pvs, &#x27;pv&#x27;, &#x27;PV&#x27;);
+
+        this.gridElementsLayer.transformerLayer &#x3D; createIconMarkers(
+          transformers,
+          &#x27;transformer&#x27;,
+          &#x27;Transformer&#x27;
+        );
+
+        this.gridLayer.radialLayer &#x3D; lineMarkers(
+          this.gridElements,
+          nodes,
+          radials
+        );
+
+        this.displayData();
+      });
+  }
+
+  displayData() {
+    this.markerClusterGroup.addLayers(this.gridLayer.radialLayer);
+
+    this.markerClusterGroup.addLayers(Object.values(this.gridLayer.nodeLayer));
+
+    this.markerClusterGroup.addLayers(
+      Object.values(this.gridElementsLayer.houseLayer)
+    );
+    this.markerClusterGroup.addLayers(
+      Object.values(this.gridElementsLayer.pvLayer)
+    );
+    this.markerClusterGroup.addLayers(
+      Object.values(this.gridElementsLayer.storageLayer)
+    );
+    this.markerClusterGroup.addLayers(
+      Object.values(this.gridElementsLayer.transformerLayer)
+    );
+  }
+
+  /* PROMPT */
+
+  openPrivacyPrompt(): void {
+    // check browserStorage if prompt should be displayed
+    try {
+      this.showPrivacyPrompt &#x3D; JSON.parse(
+        localStorage.getItem(&#x27;S4GShowPrivacyPromptProfGui&#x27;)
+      );
+    } catch (e) {
+      this.showPrivacyPrompt &#x3D; true;
+    }
+    if (this.showPrivacyPrompt || this.showPrivacyPrompt &#x3D;&#x3D; null) {
+      const dialogConfig &#x3D; new MatDialogConfig();
+
+      dialogConfig.disableClose &#x3D; true;
+      dialogConfig.autoFocus &#x3D; true;
+      dialogConfig.maxWidth &#x3D; &#x27;600px&#x27;;
+      dialogConfig.maxHeight &#x3D; &#x27;600px&#x27;;
+
+      this.privacyPrompt &#x3D; this.dialog.open(
+        PrivacyPromptComponent,
+        dialogConfig
+      );
+    }
+  }
+
+  /* EVENTS */
+
+  onMapReady(map: L.Map) {
+    this.map &#x3D; map;
+  }
+
+  markerClusterReady(group: L.MarkerClusterGroup) {
+    this.markerClusterGroup &#x3D; group;
+  }
+
+  moveMapTo(location: string) {
+    const locations &#x3D; AppSettings.LOCATIONS;
+
+    if (location in locations) {
+      this.map.panTo(locations[location]).setZoom(leafletOptions.zoom);
+    } else {
+      this.searchErrorMessage &#x3D; &#x27;Search location not found&#x27;;
+    }
+  }
+
+  toolSelection(activeTool: string) {
+    if (activeTool &#x3D;&#x3D;&#x3D; &#x27;select&#x27;) {
+      Object.entries(this.gridLayer.nodeLayer).forEach(([tech_id, node]) &#x3D;&gt;
+        node.setRadius(6).setStyle({
+          fillColor: &#x27;#000&#x27;
+        })
+      );
+    }
+
+    if (activeTool &#x3D;&#x3D;&#x3D; &#x27;storage&#x27;) {
+      Object.entries(this.gridLayer.nodeLayer).forEach(([tech_id, node]) &#x3D;&gt;
+        node
+          .setRadius(8)
+          .setStyle({
+            fillColor: &#x27;#2B79D3&#x27;
+          })
+          .unbindTooltip()
+          .on(&#x27;click&#x27;, event &#x3D;&gt; {
+            const storage_tech_id &#x3D; uniqueId(&#x27;storage_&#x27;);
+
+            const newStorage: Storage &#x3D; {
+              tech_id: storage_tech_id,
+              phases: 1,
+              bus1: tech_id,
+              feeder: &#x27;feeder_001&#x27;,
+              kV: 0.23,
+              kW: 3,
+              pf: 0.95,
+              conn: &#x27;wye&#x27;,
+              model: 1,
+              category: &#x27;storage&#x27;,
+              monitor: { state: &#x27;ON&#x27;, var: [&#x27;kW&#x27;, &#x27;kVA&#x27;, &#x27;voltage&#x27;] }
+            };
+
+            let clickedNode &#x3D; this.grid.nodes[tech_id];
+
+            clickedNode.connected_elements &#x3D; {
+              ...clickedNode.connected_elements,
+              [storage_tech_id]: newStorage
+            };
+
+            const connectedElement: ConnectedElement &#x3D; parseConnectedElement([
+              clickedNode.tech_id,
+              clickedNode
+            ]);
+
+            const [house, storage, pv] &#x3D; this.partitionConnectedElement(
+              connectedElement
+            );
+
+            this.gridElements.houses &#x3D; {
+              ...this.gridElements.houses,
+              ...house
+            };
+
+            this.gridElements.storages &#x3D; {
+              ...this.gridElements.storages,
+              ...storage
+            };
+
+            this.gridElements.pvs &#x3D; { ...this.gridElements.pvs, ...pv };
+
+            this.gridElementsLayer.houseLayer &#x3D; {
+              ...this.gridElementsLayer.houseLayer,
+              ...createIconMarkers(house, &#x27;house&#x27;, &#x27;House&#x27;)
+            };
+
+            this.gridElementsLayer.storageLayer &#x3D; {
+              ...this.gridElementsLayer.storageLayer,
+              ...createIconMarkers(storage, &#x27;storage&#x27;, &#x27;Storage&#x27;)
+            };
+
+            this.gridElementsLayer.pvLayer &#x3D; {
+              ...this.gridElementsLayer.pvLayer,
+              ...createIconMarkers(pv, &#x27;pv&#x27;, &#x27;PV&#x27;)
+            };
+
+            const radial_tech_id &#x3D; uniqueId(&#x27;powerline_&#x27;);
+
+            const powerline &#x3D; {
+              tech_id: radial_tech_id,
+              bus1: tech_id,
+              bus2: storage_tech_id,
+              linecode: &#x27;CU_4x10&#x27;,
+              phases: 3,
+              length: 0.022,
+              monitor: {
+                state: &#x27;OFF&#x27;,
+                var: [&#x27;kW&#x27;, &#x27;kVA&#x27;, &#x27;voltage&#x27;]
+              }
+            };
+
+            this.grid.radials &#x3D; {
+              ...this.grid.radials,
+              [radial_tech_id]: powerline
+            };
+
+            this.gridLayer.radialLayer &#x3D; lineMarkers(
+              this.gridElements,
+              this.grid.nodes,
+              this.grid.radials
+            );
+
+            this.markerClusterGroup.clearLayers();
+            this.displayData();
+            this.markerClusterGroup.refreshClusters();
+          })
+      );
+    }
+  }
+
+  ngOnDestroy(): void {
+    // Called once, before the instance is destroyed.
+    // Add &#x27;implements OnDestroy&#x27; to the class.
+    this.map.off();
+    this.map.remove();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;map-container&quot; class&#x3D;&quot;crosshair-cursor-enabled&quot;&gt;
+  &lt;!-- Simulation Widget --&gt;
+  &lt;app-simulation-widget
+    class&#x3D;&quot;mat-elevation-z2&quot;
+    id&#x3D;&quot;simulation-widget&quot;
+    (simulationEnded)&#x3D;&quot;displaySimulationResults($event)&quot;
+  &gt;&lt;/app-simulation-widget&gt;
+
+  &lt;!-- Main map element --&gt;
+  &lt;div
+    id&#x3D;&quot;map&quot;
+    leaflet
+    [leafletOptions]&#x3D;&quot;options&quot;
+    [leafletMarkerCluster]&#x3D;&quot;markerClusterData&quot;
+    [leafletMarkerClusterOptions]&#x3D;&quot;markerClusterOptions&quot;
+    (leafletMarkerClusterReady)&#x3D;&quot;markerClusterReady($event)&quot;
+    (leafletMapReady)&#x3D;&quot;onMapReady($event)&quot;
+  &gt;
+    &lt;!-- Location search --&gt;
+    &lt;app-searchbar
+      [errorMessage]&#x3D;&quot;searchErrorMessage&quot;
+      (search)&#x3D;&quot;onSearch($event)&quot;
+    &gt;&lt;/app-searchbar&gt;
+
+    &lt;!-- Toolbox --&gt;
+    &lt;app-toolbox
+      class&#x3D;&quot;tool-selection-menu&quot;
+      (toolSelection)&#x3D;&quot;toolSelection($event)&quot;
+    &gt;&lt;/app-toolbox&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>map.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#map-container {
+  height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.leaflet-container.crosshair-cursor-enabled {
+  cursor: crosshair !important;
+}
+
+#simulation-widget {
+  background-color: white;
+  border: #ddd thin solid;
+  margin-top: 0em;
+  padding: 1em;
+  text-align: left;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div id="map-container" class="crosshair-cursor-enabled">  <!-- Simulation Widget -->  <app-simulation-widget    class="mat-elevation-z2"    id="simulation-widget"    (simulationEnded)="displaySimulationResults($event)"  ></app-simulation-widget>  <!-- Main map element -->  <div    id="map"    leaflet    [leafletOptions]="options"    [leafletMarkerCluster]="markerClusterData"    [leafletMarkerClusterOptions]="markerClusterOptions"    (leafletMarkerClusterReady)="markerClusterReady($event)"    (leafletMapReady)="onMapReady($event)"  >    <!-- Location search -->    <app-searchbar      [errorMessage]="searchErrorMessage"      (search)="onSearch($event)"    ></app-searchbar>    <!-- Toolbox -->    <app-toolbox      class="tool-selection-menu"      (toolSelection)="toolSelection($event)"    ></app-toolbox>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'MapComponent', 'selector': 'app-map'},{'name': 'PrivacyPromptComponent', 'selector': 'app-privacy-prompt'},{'name': 'SearchbarComponent', 'selector': 'app-searchbar'},{'name': 'SimulationWidgetComponent', 'selector': 'app-simulation-widget'},{'name': 'ToolbarComponent', 'selector': 'app-toolbar'},{'name': 'ToolboxComponent', 'selector': 'app-toolbox'},{'name': 'UserSettingsComponent', 'selector': 'app-user-settings'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MapComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MapComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

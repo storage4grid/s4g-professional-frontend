@@ -1,0 +1,204 @@
+<form>
+  <h1 mat-dialog-title>Add a new battery</h1>
+  <mat-dialog-content class="storage-popup">
+    <mat-form-field class="storage-popup__selection" appearance="outline">
+      <mat-label>Model</mat-label>
+      <mat-select name="batteryModel" required [(ngModel)]="batteryModel">
+        <mat-option
+          *ngFor="let battery of objectKeys(models)"
+          [value]="battery"
+        >
+          {{ battery }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="storage-popup__information">
+      <mat-form-field>
+        <mat-label>Capacity</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].storage_capacity
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nominal Charging Power</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].nominal_charging_power
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nominal Discharging Power</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].nominal_discharging_power
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Battery Technology</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].battery_technology
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Dimensions</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].dimension
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Weight</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].weight + ' kg'
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Cost</mat-label>
+        <input
+          type="text"
+          placeholder="Please select model"
+          [value]="
+            batteryModel
+              ? models[batteryModel].cost + ' €'
+              : 'Please select model'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+    </div>
+    <mat-form-field class="storage-popup__selection" appearance="outline">
+      <mat-label>Operational Mode</mat-label>
+      <mat-select name="operationalMode" required [(ngModel)]="operationalMode">
+        <mat-option
+          *ngFor="let mode of objectKeys(operationalModes)"
+          [value]="mode"
+        >
+          {{ mode }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="storage-popup__information lifetime">
+      <mat-form-field>
+        <mat-label>Estimated Lifetime</mat-label>
+        <input
+          type="text"
+          [value]="
+            operationalMode && batteryModel
+              ? operationalModes[operationalMode].lifetime + ' years'
+              : 'Please select model and operational mode'
+          "
+          disabled
+          readonly
+          aria-readonly="true"
+          matInput
+        />
+      </mat-form-field>
+    </div>
+
+    <mat-checkbox
+      class="storage-popup__selection"
+      name="globalControl"
+      [(ngModel)]="globalControl"
+    >
+      Activate Global Control of Storage (GESSCon)
+    </mat-checkbox>
+  </mat-dialog-content>
+  <mat-divider></mat-divider>
+
+  <mat-dialog-actions class="storage-popup-actions">
+    <button type="button" color="warn" (click)="dialogRef.close()" mat-button>
+      Cancel
+    </button>
+    <button
+      type="button"
+      *ngIf="edit"
+      color="warn"
+      (click)="delete()"
+      mat-stroked-button
+    >
+      Delete
+    </button>
+    <ng-container *ngIf="edit; else addButton">
+      <button
+        [disabled]="!(operationalMode && batteryModel)"
+        (click)="submit(true)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Edit
+      </button>
+    </ng-container>
+    <ng-template #addButton>
+      <button
+        [disabled]="!(operationalMode && batteryModel)"
+        (click)="submit(false)"
+        type="button"
+        color="primary"
+        mat-stroked-button
+      >
+        Add
+      </button>
+    </ng-template>
+  </mat-dialog-actions>
+</form>

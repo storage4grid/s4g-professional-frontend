@@ -1,0 +1,9 @@
+// **********************************
+// Styling of general elements such as html, body, wrappers, etc...
+// **********************************
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+}

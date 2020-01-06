@@ -1,0 +1,22 @@
+// **********************************
+// Styling of all visual elements in
+// the toolbox
+// **********************************
+
+.toolbox-container{
+  background-color: white;
+  border: #ddd thin solid;
+
+  display: grid;
+
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  padding: 1em;
+}
+
+.toolbox-container button.active{
+  background-color: grey;
+  color: white;
+}

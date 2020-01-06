@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://simplon.fit.fraunhofer.de:8085",
+    "secure": false
+  },
+  "/se": {
+    "target": "http://simplon.fit.fraunhofer.de:8085",
+    "secure": false
+  }
+}

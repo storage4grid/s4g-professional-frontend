@@ -1,0 +1,30 @@
+<!-- Location search -->
+<form class="search-form" (ngSubmit)="onSearch('submit')">
+  <mat-form-field
+    class="search-form__input"
+    color="accent"
+    appearance="outline"
+  >
+    <mat-label>Search for a city</mat-label>
+    <input
+      #myInput
+      matInput
+      type="text"
+      (click)="myInput.select()"
+      placeholder="e.g. Fur"
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-error>{{ errorMessage }}</mat-error>
+  </mat-form-field>
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option
+      *ngFor="let option of filteredOptions | async"
+      (click)="onSearch('autocomplete')"
+      [value]="option"
+    >
+      {{ option.name | titlecase }}
+    </mat-option>
+  </mat-autocomplete>
+</form>

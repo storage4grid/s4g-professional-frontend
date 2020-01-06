@@ -1,0 +1,88 @@
+.content {
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.simulation-form {
+  padding-left: 1rem;
+
+  &.duration-span {
+    display: grid;
+    grid-template-columns: 43% 43%;
+    grid-gap: 4%;
+  }
+
+  &.penetration-level {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  &.load-simulation {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mat-caption {
+  color: orange;
+}
+
+.simulation-status {
+  padding: 1rem 0 0 1rem;
+}
+
+.running-simulation-message {
+  color: #5c6bc0;
+}
+
+.ready-simulation-message {
+  color: #27ae60;
+}
+
+.error-simulation-message {
+  color: red;
+}
+
+.simulation-message {
+  color: #d35400;
+}
+
+.simulation-error-count {
+  color: red;
+}
+
+.export-icon {
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+
+.ee-result {
+  color: black;
+  padding: 1rem 0.5rem;
+
+  .simulation-duration-message {
+    margin-bottom: 1rem;
+    color: gray;
+  }
+
+  p {
+    padding: 0;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.exportSimulationButton {
+  margin-top: 1rem;
+}
+
+::ng-deep .help-tooltip {
+  white-space: pre-line;
+}
+
+.ess-operational-mode {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}

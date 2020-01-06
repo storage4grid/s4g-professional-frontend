@@ -1,0 +1,51 @@
+<div class="toolbox-container">
+  <button
+    mat-raised-button
+    matTooltip="Explore"
+    (click)="activateTool(tools.explore)"
+    [class.active]="activeTool === 'explore'"
+  >
+    <mat-icon>my_location</mat-icon>
+  </button>
+  <button
+    mat-raised-button
+    matTooltip="Select"
+    (click)="activateTool(tools.select)"
+    [class.active]="activeTool === 'select'"
+  >
+    <mat-icon>near_me</mat-icon>
+  </button>
+  <button
+    mat-raised-button
+    matTooltip="Add new storage"
+    (click)="activateTool(tools.storage)"
+    [class.active]="activeTool === 'storage'"
+  >
+    <mat-icon>battery_std</mat-icon>
+  </button>
+  <button
+    mat-raised-button
+    matTooltip="Add a new photovoltaic"
+    (click)="activateTool(tools.pv)"
+    [class.active]="activeTool === 'pv'"
+  >
+    <mat-icon>wb_sunny</mat-icon>
+  </button>
+  <button
+    mat-raised-button
+    matTooltip="Add a new EV charging station"
+    (click)="activateTool(tools.ev)"
+    [class.active]="activeTool === 'ev'"
+  >
+    <mat-icon>directions_car</mat-icon>
+  </button>
+  <!-- <button
+    mat-raised-button
+    matTooltip="Add a new house"
+    (click)="activateTool(tools.house)"
+    [class.active]="activeTool === 'house'"
+    disabled
+  >
+    <mat-icon>home</mat-icon>
+  </button> -->
+</div>
