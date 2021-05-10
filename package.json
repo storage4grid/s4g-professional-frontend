@@ -35,7 +35,7 @@
     "keycloak-js": "^5.0.0",
     "leaflet": "^1.4.0",
     "leaflet.markercluster": "^1.4.1",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
     "moment": "^2.24.0",
     "rxjs": "^6.4.0",
